@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&family=Signika+Negative&display=swap" rel="stylesheet">
+    <title>Olympics Insights</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'insight/clear.css' %}">
+    <link rel="stylesheet" href="{% static 'insight/style.css' %}">
+</head>
+<body class="top">
+    {%load static%}
+    <img src="{% static 'insight\img\cool.jpg' %}">
+    <div class='dash'>
+        Tokyo 2020 Olympics 
+    </div>
+    <div class="inp">
+        <p class="head">Get Visual Insights on the Topic of your choice!</p>
+        <br>
+        <br>
+        <br>
+        <form class='inputForQuery' action='/insight/query' method='post'>
+            {% csrf_token %}
+            {{form}}
+            <br>
+            <br>
+            <div class="padd">
+            <input class = "button" type="submit" value="Submit">
+            </div>
+        </form>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrapper2{
+      margin-top:20px;
+  }
+  
+  .block {
+    flex: 1;
+    padding:20px;
+    text-align:center;
+  }
+  #ts{
+    padding-left: 10px;
+    padding-right: 5px;
+    width: 60%;
+  }
+  #pc{
+    padding-left: 5px;
+    padding-right: 10px;
+    width: 40%;
+  }
+
+  .ts-pc p {
+    font-size: 27px;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 10;
+    padding-left: 65px;
+  }
+
+  .searched .wrapper .block p{ 
+      float:right;
+  }
+
+  .searched p {
+    font-size:40px;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 10;
+  }
+
+  .searched .wrapper .block .second{ 
+      float:left;
+  }
+  #back{
+    z-index: -1;
+    opacity: 0.5;
+    position: absolute;
+  }
+  #ts-text{
+      text-align: start;
+  }
+  .fine_grain .wrapper .block h3{
+      text-align: center;
+  }
+
+.fine_grain h3{
+    font-size:30px;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 10;
+}
+
+  .ts-pc .wrapper img{
+      text-align:center;
+  }
+  .positive{
+    height: 40%;
+  }
+  .ts-pc{
+      align-items:center;
+      padding:20px;
+  }
+
+  .ts-pc img{
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  td{
+    white-space: nowrap;
+    overflow: h;
+  }
+  
+  #back{
+    position:absolute;
+    z-index: -1;
+    width:100;
+    height:400%;
+    width:100%;
+    opacity:0.4;
+  }
+
+  
+
+  .ts-pc p {
+    font-size:27px;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 10;
+  }
+
+  .wc .wrapper h3{
+      padding-bottom:25px;
+      font-size:27px;
+      font-family: 'Signika Negative', sans-serif;
+      font-weight: 10;
+  }
+  table td th{
+    border:1px solid black    
+  }
+  .result
+  {
+    padding-left: 30px;
+    padding-right:50px;
+
+  }
+
+  .result th{
+      font-size:25px;
+      width:100%;
+      margin-right:25px;
+      font-family: 'Signika Negative', sans-serif;
+      font-weight: 10;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+  tr { 
+    border: solid;
+    border-width: 1px 0;
+    padding:10px;
+  }
+
+  td{
+      padding:5px;
+      font-size:20px;
+      font-family: 'Signika Negative', sans-serif;
+  }
+  .sample{
+      padding-bottom:25px;
+      padding-left: 20px;
+      font-size:27px;
+      font-family: 'Signika Negative', sans-serif;
+      font-weight: 10;
+      text-align:center;
+      margin-top:30px;
+  }
+  .subtable{
+      overflow-y: scroll;
+  }
+
+  table{
+    overflow-y:scroll;
+    height:250px;
+    display:block;
+ }

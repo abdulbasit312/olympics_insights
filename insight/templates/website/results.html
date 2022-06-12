@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&family=Signika+Negative&display=swap" rel="stylesheet">
+    <title>Insights-{{text}}</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'insight/clear.css' %}">
+    <link rel="stylesheet" href="{% static 'insight/style_result.css' %}">
+</head>
+<body>
+    <img id='back' src="{% static 'insight\img\back.jpg' %}">
+    <div class="searched">
+        <div class="wrapper">
+            <div class="block">
+                <p>Searched Item: {{text}}</p>
+            </div>
+            <div class="block">
+                <p class="second">Total Tweets: {{total}}<p>
+            </div>
+        </div>
+    </div>
+    <div class='fine_grain'>
+        <div class="wrapper wrapper2">
+            <div class="block">
+                <h3>Positive tweets: {{positive}}</h3>
+            </div>
+            <div class="block">
+                <h3>Neutral tweets: {{neutral}}</h3>
+            </div>
+            <div class="block">
+                <h3>Negative tweets: {{negative}}</h3>
+            </div>
+        </div>
+    </div>
+    <div class='ts-pc wrapper'>
+                <p>Time Series Graph</p>
+                <img src= "{% static 'insight/diagrams/timeseries.jpg' %}">
+                <p>Pie Chart</p>
+                <img src= "{% static 'insight/diagrams/pie.jpg' %}">
+    </div>
+    <div class="pc wrapper" id='pc'>
+            
+    </div>
+    </div>
+    <div class='wc'>
+        <div class="wrapper">
+            <div class="block">
+                <h3>Positive Word Cloud</h3>
+                <img src= "{% static 'insight/diagrams/wc-positive.jpg' %}">
+            </div>
+            <div class="block">
+                <h3>Neutral Word Cloud</h3>
+                <img src= "{% static 'insight/diagrams/wc-neutral.jpg' %}">
+            </div>
+            <div class="block">
+                <h3>Negative Word Cloud</h3>
+                <img src= "{% static 'insight/diagrams/wc-negative.jpg' %}">
+            </div>
+        </div>
+    </div>
+    <h3  class='sample'>Sample Positive Tweets</h3>
+    <div class='result'>
+                 <table>
+                   <tr style="color:white;background-color:grey">
+                      <th>Tweet</th>
+                      <th>Date</th>
+                   </tr>
+                   <div class='subtable'>
+                    {% for record in sample_pos%}
+                        <tr>
+                            <td>{{record.0}}</td>
+                            <td>{{record.1}}</td>
+                        </tr>
+                    {%endfor%}
+                    </div>
+                   </table>  
+    </div>
+    <h3  class='sample'>Sample Negative Tweets</h3>
+    <div class='result'>
+                 <table>
+                   <tr style="color:white;background-color:grey">
+                      <th>Tweet</th>
+                      <th>Date</th>
+                   </tr>
+                   <div class='subtable'>
+                    {% for record in sample_neg%}
+                        <tr>
+                            <td>{{record.0}}</td>
+                            <td>{{record.1}}</td>
+                        </tr>
+                    {%endfor%}
+                    </div>
+                   </table>  
+    </div>
+    <h3  class='sample'>Sample Neutral Tweets</h3>
+    <div class='result'>
+                 <table>
+                   <tr style="color:white;background-color:grey">
+                      <th>Tweet</th>
+                      <th>Date</th>
+                   </tr>
+                   <div class='subtable'>
+                    {% for record in sample_neu%}
+                        <tr>
+                            <td>{{record.0}}</td>
+                            <td>{{record.1}}</td>
+                        </tr>
+                    {%endfor%}
+                    </div>
+                   </table>  
+    </div>
+</body>
+</html>
+
